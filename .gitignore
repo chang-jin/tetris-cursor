@@ -1,0 +1,12 @@
+# Cursor 로컬 설정 (API 키·토큰 포함 가능)
+.cursor/mcp.json
+.cursor/hooks/logs/
+.cursor/hooks/audit.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# 에디터
+*.swp
+*.swo

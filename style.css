@@ -1,0 +1,151 @@
+:root {
+  --cell-size: 30px;
+  --cols: 10;
+  --rows: 20;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.game-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.game-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.board-wrapper {
+  position: relative;
+}
+
+.game-status {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #4a2020;
+  color: #ff8888;
+  font-weight: bold;
+}
+
+.game-status.hidden {
+  display: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--cell-size));
+  grid-template-rows: repeat(var(--rows), var(--cell-size));
+  background: #0f0f1a;
+  border: 3px solid #4a4a6a;
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid #2a2a4a;
+  background: #0f0f1a;
+}
+
+/* 색상은 script.js TETROMINOES.color와 대응 */
+.piece-i {
+  background: #00f0f0;
+}
+
+.piece-o {
+  background: #f0f000;
+}
+
+.piece-t {
+  background: #a000f0;
+}
+
+.piece-s {
+  background: #00f000;
+}
+
+.piece-z {
+  background: #f00000;
+}
+
+.piece-j {
+  background: #0000f0;
+}
+
+.piece-l {
+  background: #f0a000;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 180px;
+  text-align: left;
+}
+
+.score-panel h2,
+.help-panel h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: #4a90d9;
+  color: white;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+.help-panel ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  background: #333;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
